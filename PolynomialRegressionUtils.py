@@ -86,3 +86,45 @@ def readDependentDataset():
         y = pickle.load(y_pickle)
     
     return y
+
+"""
+Save LinearRegressionModel as a pickle file.
+"""
+def saveLinearRegressionModel(LinearRegressionModel):
+    
+    #Write LinearRegressionModel as a picke file
+    with open("LinearRegressionModel.pkl",'wb') as LinearRegressionModel_Pickle:
+        pickle.dump(LinearRegressionModel, LinearRegressionModel_Pickle, protocol = 2)
+
+
+"""
+read LinearRegressionModel from pickle file
+"""
+def readLinearRegressionModel():
+    
+    #load LinearRegressionModel model
+    with open("LinearRegressionModel.pkl","rb") as LinearRegressionModel:
+        linearRegressionModel = pickle.load(LinearRegressionModel)
+    
+    return linearRegressionModel
+
+"""
+Save PolynomialLinearRegressionModel as a pickle file.
+"""
+def savePolynomialRegressionModelForVisualization(PolynomialRegressionModelForVisualization):
+    
+    #Write PolynomialRegressionModel for visualization as a picke file
+    with open("PolynomialRegressionModelForVisualization.pkl",'wb') as PolynomialRegressionModelForVisualization_Pickle:
+        pickle.dump(PolynomialRegressionModelForVisualization, PolynomialRegressionModelForVisualization_Pickle, protocol = 2)
+
+
+"""
+read polynomialRegressionModel for visualization from pickle file
+"""
+def readPolynomialRegressionModelForVisualization():
+    
+    #load PolynomialRegressionModel model
+    with open("PolynomialRegressionModelForVisualization.pkl","rb") as PolynomialRegressionModelForVisualization:
+        polynomialRegressionModelForVisualization = pickle.load(PolynomialRegressionModelForVisualization)
+    
+    return polynomialRegressionModelForVisualization
